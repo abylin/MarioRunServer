@@ -1,0 +1,16 @@
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Console\bin\Debug\Mario.Console.exe.config
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Console\bin\Debug\Mario.Console.exe
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Console\bin\Debug\Mario.Console.pdb
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Console\bin\Debug\log4net.dll
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Console\bin\Debug\Mario.Business.dll
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Console\bin\Debug\Mario.DataAccess.dll
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Console\bin\Debug\EntityFramework.dll
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Console\bin\Debug\Newtonsoft.Json.dll
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Console\bin\Debug\Mario.Business.pdb
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Console\bin\Debug\Mario.DataAccess.pdb
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Console\bin\Debug\log4net.xml
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Console\bin\Debug\EntityFramework.xml
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Console\bin\Debug\Newtonsoft.Json.xml
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Console\obj\Debug\Mario.Console.csprojResolveAssemblyReference.cache
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Console\obj\Debug\Mario.Console.exe
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Console\obj\Debug\Mario.Console.pdb

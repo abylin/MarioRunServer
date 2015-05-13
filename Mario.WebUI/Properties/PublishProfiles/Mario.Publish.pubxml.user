@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\aby\Desktop\Mario.WebUI</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_Data/Mario.mdf">
+      <publishTime>03/16/2015 12:22:56</publishTime>
+    </File>
+    <File Include="App_Data/Mario_log.ldf">
+      <publishTime>03/16/2015 12:22:56</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.compiled">
+      <publishTime>05/13/2015 15:47:36</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.dll">
+      <publishTime>05/13/2015 15:47:36</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>02/28/2015 17:34:10</publishTime>
+    </File>
+    <File Include="bin/Ext.Net.dll">
+      <publishTime>02/28/2015 17:42:30</publishTime>
+    </File>
+    <File Include="bin/Ext.Net.Utilities.dll">
+      <publishTime>02/28/2015 17:42:27</publishTime>
+    </File>
+    <File Include="bin/Mario.Business.dll">
+      <publishTime>05/13/2015 15:47:29</publishTime>
+    </File>
+    <File Include="bin/Mario.DataAccess.dll">
+      <publishTime>05/13/2015 15:47:28</publishTime>
+    </File>
+    <File Include="bin/Mario.WebUI.dll">
+      <publishTime>05/13/2015 15:47:30</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>02/28/2015 17:42:27</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>02/28/2015 17:42:27</publishTime>
+    </File>
+    <File Include="bin/Transformer.NET.dll">
+      <publishTime>02/28/2015 17:42:27</publishTime>
+    </File>
+    <File Include="bin/WebActivatorEx.dll">
+      <publishTime>02/28/2015 17:42:27</publishTime>
+    </File>
+    <File Include="ExtNetBreakLicense.ashx">
+      <publishTime>03/02/2015 14:39:44</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>05/12/2015 11:30:07</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>02/28/2015 17:44:02</publishTime>
+    </File>
+    <File Include="Pages/ChangePassword.aspx">
+      <publishTime>05/12/2015 17:16:06</publishTime>
+    </File>
+    <File Include="Pages/CommandGuide.html">
+      <publishTime>04/24/2015 09:29:18</publishTime>
+    </File>
+    <File Include="Pages/History.html">
+      <publishTime>05/11/2015 16:40:25</publishTime>
+    </File>
+    <File Include="Pages/InConstruction.html">
+      <publishTime>03/05/2015 10:33:51</publishTime>
+    </File>
+    <File Include="Pages/MainFrame.aspx">
+      <publishTime>05/07/2015 11:23:23</publishTime>
+    </File>
+    <File Include="Pages/ManageAppProjects.aspx">
+      <publishTime>04/29/2015 18:00:46</publishTime>
+    </File>
+    <File Include="Pages/ManageMarioPackages.aspx">
+      <publishTime>04/15/2015 12:01:40</publishTime>
+    </File>
+    <File Include="Pages/ManageMobileDeviceModels.aspx">
+      <publishTime>05/11/2015 17:22:36</publishTime>
+    </File>
+    <File Include="Pages/ManageMobileDevices.aspx">
+      <publishTime>05/12/2015 17:22:49</publishTime>
+    </File>
+    <File Include="Pages/ManageRoles.aspx">
+      <publishTime>04/17/2015 09:26:26</publishTime>
+    </File>
+    <File Include="Pages/ManageUserInfos.aspx">
+      <publishTime>04/27/2015 15:05:11</publishTime>
+    </File>
+    <File Include="Pages/PermissionDenied.html">
+      <publishTime>03/12/2015 11:38:26</publishTime>
+    </File>
+    <File Include="Pages/ServerHelp.html">
+      <publishTime>04/29/2015 16:26:16</publishTime>
+    </File>
+    <File Include="Pages/SysAdmin.aspx">
+      <publishTime>03/31/2015 15:41:40</publishTime>
+    </File>
+    <File Include="Pages/ViewAppProjectsSummaryReport.aspx">
+      <publishTime>05/07/2015 11:38:44</publishTime>
+    </File>
+    <File Include="Pages/ViewDayReport.aspx">
+      <publishTime>04/15/2015 17:18:20</publishTime>
+    </File>
+    <File Include="Pages/ViewLogs.aspx">
+      <publishTime>03/26/2015 10:40:34</publishTime>
+    </File>
+    <File Include="Pages/ViewMobileDevicesLogs.aspx">
+      <publishTime>04/21/2015 11:31:08</publishTime>
+    </File>
+    <File Include="Pages/ViewSystemLogs.aspx">
+      <publishTime>04/21/2015 11:18:48</publishTime>
+    </File>
+    <File Include="Pages/ViewTodayTasks.aspx">
+      <publishTime>05/13/2015 15:16:09</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>05/13/2015 15:47:32</publishTime>
+    </File>
+    <File Include="Resources/css/component.css">
+      <publishTime>03/18/2015 11:34:50</publishTime>
+    </File>
+    <File Include="Resources/css/css.css">
+      <publishTime>03/18/2015 11:15:00</publishTime>
+    </File>
+    <File Include="Resources/css/default.css">
+      <publishTime>03/18/2015 11:15:00</publishTime>
+    </File>
+    <File Include="Resources/ExcelFiles/Template/OperationMessagesTemplate.xlsx">
+      <publishTime>03/30/2015 10:34:44</publishTime>
+    </File>
+    <File Include="Resources/ExcelFiles/Template/RetentionTemplate.xlsx">
+      <publishTime>03/26/2015 14:46:19</publishTime>
+    </File>
+    <File Include="Resources/Images/explorer/icon-android.png">
+      <publishTime>05/12/2015 11:00:21</publishTime>
+    </File>
+    <File Include="Resources/Images/explorer/icon-chrome.png">
+      <publishTime>05/12/2015 11:00:20</publishTime>
+    </File>
+    <File Include="Resources/Images/explorer/icon-ff.png">
+      <publishTime>05/12/2015 11:00:20</publishTime>
+    </File>
+    <File Include="Resources/Images/explorer/icon-ie.png">
+      <publishTime>05/12/2015 11:00:20</publishTime>
+    </File>
+    <File Include="Resources/Images/explorer/icon-ios.png">
+      <publishTime>05/12/2015 11:00:21</publishTime>
+    </File>
+    <File Include="Resources/Images/explorer/icon-opera.png">
+      <publishTime>05/12/2015 11:00:21</publishTime>
+    </File>
+    <File Include="Resources/Images/explorer/icon-safari.png">
+      <publishTime>05/12/2015 11:00:20</publishTime>
+    </File>
+    <File Include="Resources/Images/explorer/icon-win8.png">
+      <publishTime>05/12/2015 11:00:21</publishTime>
+    </File>
+    <File Include="Resources/Images/InConstruction1.jpg">
+      <publishTime>03/05/2015 10:32:18</publishTime>
+    </File>
+    <File Include="Resources/Images/InConstruction2.jpg">
+      <publishTime>03/05/2015 10:32:18</publishTime>
+    </File>
+    <File Include="Resources/Images/Mario1.jpg">
+      <publishTime>03/02/2015 15:03:24</publishTime>
+    </File>
+    <File Include="Resources/Images/PermissionDenied.jpg">
+      <publishTime>03/12/2015 11:36:30</publishTime>
+    </File>
+    <File Include="Resources/Images/Rentention.png">
+      <publishTime>04/29/2015 16:22:05</publishTime>
+    </File>
+    <File Include="Resources/js/demoad.js">
+      <publishTime>03/18/2015 11:06:34</publishTime>
+    </File>
+    <File Include="Resources/js/modernizr.custom.js">
+      <publishTime>03/18/2015 11:06:34</publishTime>
+    </File>
+    <File Include="Task.ashx">
+      <publishTime>03/03/2015 11:03:28</publishTime>
+    </File>
+    <File Include="UpdatePackage/marioRunV2.1.apk">
+      <publishTime>03/03/2015 14:26:23</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/12/2015 16:41:41</publishTime>
+    </File>
+    <File Include="WeiXin/QRImageHandler.ashx">
+      <publishTime>05/12/2015 15:17:27</publishTime>
+    </File>
+    <File Include="WeiXin/WeiXinHandler.ashx">
+      <publishTime>04/24/2015 10:26:25</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

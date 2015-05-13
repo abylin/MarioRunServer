@@ -1,0 +1,705 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MarioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AppProjects">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ChineseName" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="AddLimit" Type="int" Nullable="false" />
+          <Property Name="StartDate" Type="datetime" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Memo" Type="nvarchar(max)" />
+          <Property Name="RetainDelayHour" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AppProjectsBlackTime">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AppProjectsID" Type="int" Nullable="false" />
+          <Property Name="StartTime" Type="time" Precision="7" Nullable="false" />
+          <Property Name="EndTime" Type="time" Precision="7" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AppProjectsInMobileDevices">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MobileDevicesID" Type="int" Nullable="false" />
+          <Property Name="AppProjectsID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AppProjectsInRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AppProjectsID" Type="int" Nullable="false" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AppProjectsRetention">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AppProjectsID" Type="int" Nullable="false" />
+          <Property Name="Days" Type="int" Nullable="false" />
+          <Property Name="Retention" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DayReport">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AppProjectsID" Type="int" Nullable="false" />
+          <Property Name="CollectDate" Type="datetime" Nullable="false" />
+          <Property Name="AddCount" Type="int" Nullable="false" />
+          <Property Name="Retention" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MarioPackages">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Version" Type="int" Nullable="false" />
+          <Property Name="DownloadUrl" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Platform" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MobileDeviceModels">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Brand" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Device" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Width" Type="int" Nullable="false" />
+          <Property Name="Height" Type="int" Nullable="false" />
+          <Property Name="OSVersion" Type="nvarchar" MaxLength="250" />
+          <Property Name="Weight" Type="int" Nullable="false" />
+          <Property Name="RandomStart" Type="int" Nullable="false" />
+          <Property Name="RandomEnd" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MobileDevices">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Memo" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="InUse" Type="bit" Nullable="false" />
+          <Property Name="LastResponseTime" Type="datetime" />
+          <Property Name="RealIMEI" Type="bigint" Nullable="false" />
+          <Property Name="RealModel" Type="nvarchar" MaxLength="250" />
+          <Property Name="NeedReboot" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MobileDevicesLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MobileDevicesID" Type="int" Nullable="false" />
+          <Property Name="LogTime" Type="datetime" Nullable="false" />
+          <Property Name="Memo" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OperationMessages">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OperationSchemesID" Type="int" Nullable="false" />
+          <Property Name="Step" Type="int" Nullable="false" />
+          <Property Name="XPoint" Type="int" Nullable="false" />
+          <Property Name="YPoint" Type="int" Nullable="false" />
+          <Property Name="ToXPoint" Type="int" Nullable="false" />
+          <Property Name="ToYPoint" Type="int" Nullable="false" />
+          <Property Name="PhysicalKey" Type="int" Nullable="false" />
+          <Property Name="Interval" Type="int" Nullable="false" />
+          <Property Name="Action" Type="int" Nullable="false" />
+          <Property Name="CommandScript" Type="nvarchar(max)" />
+          <Property Name="Memo" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="OperationSchemes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="AppProjectsID" Type="int" Nullable="false" />
+          <Property Name="SchemeType" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PhoneNumberSection">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NumberSection" Type="int" Nullable="false" />
+          <Property Name="Province" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="City" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="TelecomOperators" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="AreaCode" Type="int" Nullable="false" />
+          <Property Name="ZipCode" Type="int" Nullable="false" />
+          <Property Name="ProvinceSimCode" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Memo" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="SystemLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="LogTime" Type="datetime" Nullable="false" />
+          <Property Name="Memo" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserInfos">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ChineseName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="WeiXinOpenID" Type="nvarchar" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="UserInRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VirtualIMEI">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AppProjectsID" Type="int" Nullable="false" />
+          <Property Name="IMEI" Type="bigint" Nullable="false" />
+          <Property Name="IMSI" Type="bigint" Nullable="false" />
+          <Property Name="MAC" Type="nvarchar" MaxLength="17" />
+          <Property Name="Brand" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Device" Type="nvarchar" MaxLength="250" />
+          <Property Name="StartDate" Type="datetime" Nullable="false" />
+          <Property Name="EndDate" Type="datetime" Nullable="false" />
+          <Property Name="TaskStatus" Type="int" Nullable="false" />
+          <Property Name="MobileDevicesID" Type="int" Nullable="false" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="Line1Number" Type="bigint" Nullable="false" />
+          <Property Name="SimSerialNumber" Type="nvarchar" MaxLength="20" />
+          <Property Name="TelecomOperatorsName" Type="nvarchar" MaxLength="250" />
+          <Property Name="NetworkType" Type="int" Nullable="false" />
+          <Property Name="PhoneNumberCity" Type="nvarchar" MaxLength="50" />
+          <Property Name="RetainStartTime" Type="datetime" />
+          <Property Name="Width" Type="int" Nullable="false" />
+          <Property Name="Height" Type="int" Nullable="false" />
+          <Property Name="OSVersion" Type="nvarchar" MaxLength="250" />
+          <Property Name="AndroidID" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="MarioModelStoreContainer">
+          <EntitySet Name="AppProjects" EntityType="Self.AppProjects" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AppProjectsBlackTime" EntityType="Self.AppProjectsBlackTime" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AppProjectsInMobileDevices" EntityType="Self.AppProjectsInMobileDevices" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AppProjectsInRole" EntityType="Self.AppProjectsInRole" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AppProjectsRetention" EntityType="Self.AppProjectsRetention" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DayReport" EntityType="Self.DayReport" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MarioPackages" EntityType="Self.MarioPackages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MobileDeviceModels" EntityType="Self.MobileDeviceModels" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MobileDevices" EntityType="Self.MobileDevices" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MobileDevicesLog" EntityType="Self.MobileDevicesLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OperationMessages" EntityType="Self.OperationMessages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OperationSchemes" EntityType="Self.OperationSchemes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PhoneNumberSection" EntityType="Self.PhoneNumberSection" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SystemLog" EntityType="Self.SystemLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserInfos" EntityType="Self.UserInfos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserInRole" EntityType="Self.UserInRole" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VirtualIMEI" EntityType="Self.VirtualIMEI" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MarioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="MarioEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AppProjects" EntityType="MarioModel.AppProjects" />
+          <EntitySet Name="AppProjectsBlackTime" EntityType="MarioModel.AppProjectsBlackTime" />
+          <EntitySet Name="AppProjectsInMobileDevices" EntityType="MarioModel.AppProjectsInMobileDevices" />
+          <EntitySet Name="AppProjectsInRole" EntityType="MarioModel.AppProjectsInRole" />
+          <EntitySet Name="AppProjectsRetention" EntityType="MarioModel.AppProjectsRetention" />
+          <EntitySet Name="DayReport" EntityType="MarioModel.DayReport" />
+          <EntitySet Name="MarioPackages" EntityType="MarioModel.MarioPackages" />
+          <EntitySet Name="MobileDevicesLog" EntityType="MarioModel.MobileDevicesLog" />
+          <EntitySet Name="OperationMessages" EntityType="MarioModel.OperationMessages" />
+          <EntitySet Name="OperationSchemes" EntityType="MarioModel.OperationSchemes" />
+          <EntitySet Name="PhoneNumberSection" EntityType="MarioModel.PhoneNumberSection" />
+          <EntitySet Name="Roles" EntityType="MarioModel.Roles" />
+          <EntitySet Name="SystemLog" EntityType="MarioModel.SystemLog" />
+          <EntitySet Name="UserInfos" EntityType="MarioModel.UserInfos" />
+          <EntitySet Name="UserInRole" EntityType="MarioModel.UserInRole" />
+          <EntitySet Name="MobileDeviceModels" EntityType="MarioModel.MobileDeviceModels" />
+          <EntitySet Name="MobileDevices" EntityType="MarioModel.MobileDevices" />
+          <EntitySet Name="VirtualIMEI" EntityType="MarioModel.VirtualIMEI" />
+        </EntityContainer>
+        <EntityType Name="AppProjects">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ChineseName" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="AddLimit" Type="Int32" Nullable="false" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="Memo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RetainDelayHour" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AppProjectsBlackTime">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AppProjectsID" Type="Int32" Nullable="false" />
+          <Property Name="StartTime" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="EndTime" Type="Time" Nullable="false" Precision="7" />
+        </EntityType>
+        <EntityType Name="AppProjectsInMobileDevices">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MobileDevicesID" Type="Int32" Nullable="false" />
+          <Property Name="AppProjectsID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AppProjectsInRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AppProjectsID" Type="Int32" Nullable="false" />
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AppProjectsRetention">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AppProjectsID" Type="Int32" Nullable="false" />
+          <Property Name="Days" Type="Int32" Nullable="false" />
+          <Property Name="Retention" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DayReport">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AppProjectsID" Type="Int32" Nullable="false" />
+          <Property Name="CollectDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="AddCount" Type="Int32" Nullable="false" />
+          <Property Name="Retention" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MarioPackages">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Version" Type="Int32" Nullable="false" />
+          <Property Name="DownloadUrl" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Platform" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MobileDevicesLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MobileDevicesID" Type="Int32" Nullable="false" />
+          <Property Name="LogTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Memo" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="OperationMessages">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OperationSchemesID" Type="Int32" Nullable="false" />
+          <Property Name="Step" Type="Int32" Nullable="false" />
+          <Property Name="XPoint" Type="Int32" Nullable="false" />
+          <Property Name="YPoint" Type="Int32" Nullable="false" />
+          <Property Name="ToXPoint" Type="Int32" Nullable="false" />
+          <Property Name="ToYPoint" Type="Int32" Nullable="false" />
+          <Property Name="PhysicalKey" Type="Int32" Nullable="false" />
+          <Property Name="Interval" Type="Int32" Nullable="false" />
+          <Property Name="Action" Type="Int32" Nullable="false" />
+          <Property Name="CommandScript" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Memo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="OperationSchemes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="AppProjectsID" Type="Int32" Nullable="false" />
+          <Property Name="SchemeType" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PhoneNumberSection">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NumberSection" Type="Int32" Nullable="false" />
+          <Property Name="Province" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="TelecomOperators" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="AreaCode" Type="Int32" Nullable="false" />
+          <Property Name="ZipCode" Type="Int32" Nullable="false" />
+          <Property Name="ProvinceSimCode" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Memo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SystemLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="LogTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Memo" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="UserInfos">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChineseName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WeiXinOpenID" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="UserInRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MobileDeviceModels">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Brand" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Device" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Width" Type="Int32" Nullable="false" />
+          <Property Name="Height" Type="Int32" Nullable="false" />
+          <Property Name="OSVersion" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Weight" Type="Int32" Nullable="false" />
+          <Property Name="RandomStart" Type="Int32" Nullable="false" />
+          <Property Name="RandomEnd" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MobileDevices">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Memo" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="InUse" Type="Boolean" Nullable="false" />
+          <Property Name="LastResponseTime" Type="DateTime" Precision="3" />
+          <Property Name="RealIMEI" Type="Int64" Nullable="false" />
+          <Property Name="RealModel" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="NeedReboot" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VirtualIMEI">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AppProjectsID" Type="Int32" Nullable="false" />
+          <Property Name="IMEI" Type="Int64" Nullable="false" />
+          <Property Name="IMSI" Type="Int64" Nullable="false" />
+          <Property Name="MAC" Type="String" MaxLength="17" FixedLength="false" Unicode="true" />
+          <Property Name="Brand" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Device" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TaskStatus" Type="Int32" Nullable="false" />
+          <Property Name="MobileDevicesID" Type="Int32" Nullable="false" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="Line1Number" Type="Int64" Nullable="false" />
+          <Property Name="SimSerialNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TelecomOperatorsName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="NetworkType" Type="Int32" Nullable="false" />
+          <Property Name="PhoneNumberCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RetainStartTime" Type="DateTime" Precision="3" />
+          <Property Name="Width" Type="Int32" Nullable="false" />
+          <Property Name="Height" Type="Int32" Nullable="false" />
+          <Property Name="OSVersion" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="AndroidID" Type="Int64" Nullable="false" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MarioModelStoreContainer" CdmEntityContainer="MarioEntities">
+          <EntitySetMapping Name="AppProjects">
+            <EntityTypeMapping TypeName="MarioModel.AppProjects">
+              <MappingFragment StoreEntitySet="AppProjects">
+                <ScalarProperty Name="RetainDelayHour" ColumnName="RetainDelayHour" />
+                <ScalarProperty Name="Memo" ColumnName="Memo" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="AddLimit" ColumnName="AddLimit" />
+                <ScalarProperty Name="ChineseName" ColumnName="ChineseName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AppProjectsBlackTime">
+            <EntityTypeMapping TypeName="MarioModel.AppProjectsBlackTime">
+              <MappingFragment StoreEntitySet="AppProjectsBlackTime">
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="AppProjectsID" ColumnName="AppProjectsID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AppProjectsInMobileDevices">
+            <EntityTypeMapping TypeName="MarioModel.AppProjectsInMobileDevices">
+              <MappingFragment StoreEntitySet="AppProjectsInMobileDevices">
+                <ScalarProperty Name="AppProjectsID" ColumnName="AppProjectsID" />
+                <ScalarProperty Name="MobileDevicesID" ColumnName="MobileDevicesID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AppProjectsInRole">
+            <EntityTypeMapping TypeName="MarioModel.AppProjectsInRole">
+              <MappingFragment StoreEntitySet="AppProjectsInRole">
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="AppProjectsID" ColumnName="AppProjectsID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AppProjectsRetention">
+            <EntityTypeMapping TypeName="MarioModel.AppProjectsRetention">
+              <MappingFragment StoreEntitySet="AppProjectsRetention">
+                <ScalarProperty Name="Retention" ColumnName="Retention" />
+                <ScalarProperty Name="Days" ColumnName="Days" />
+                <ScalarProperty Name="AppProjectsID" ColumnName="AppProjectsID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DayReport">
+            <EntityTypeMapping TypeName="MarioModel.DayReport">
+              <MappingFragment StoreEntitySet="DayReport">
+                <ScalarProperty Name="Retention" ColumnName="Retention" />
+                <ScalarProperty Name="AddCount" ColumnName="AddCount" />
+                <ScalarProperty Name="CollectDate" ColumnName="CollectDate" />
+                <ScalarProperty Name="AppProjectsID" ColumnName="AppProjectsID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MarioPackages">
+            <EntityTypeMapping TypeName="MarioModel.MarioPackages">
+              <MappingFragment StoreEntitySet="MarioPackages">
+                <ScalarProperty Name="Platform" ColumnName="Platform" />
+                <ScalarProperty Name="DownloadUrl" ColumnName="DownloadUrl" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MobileDevicesLog">
+            <EntityTypeMapping TypeName="MarioModel.MobileDevicesLog">
+              <MappingFragment StoreEntitySet="MobileDevicesLog">
+                <ScalarProperty Name="Memo" ColumnName="Memo" />
+                <ScalarProperty Name="LogTime" ColumnName="LogTime" />
+                <ScalarProperty Name="MobileDevicesID" ColumnName="MobileDevicesID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OperationMessages">
+            <EntityTypeMapping TypeName="MarioModel.OperationMessages">
+              <MappingFragment StoreEntitySet="OperationMessages">
+                <ScalarProperty Name="Memo" ColumnName="Memo" />
+                <ScalarProperty Name="CommandScript" ColumnName="CommandScript" />
+                <ScalarProperty Name="Action" ColumnName="Action" />
+                <ScalarProperty Name="Interval" ColumnName="Interval" />
+                <ScalarProperty Name="PhysicalKey" ColumnName="PhysicalKey" />
+                <ScalarProperty Name="ToYPoint" ColumnName="ToYPoint" />
+                <ScalarProperty Name="ToXPoint" ColumnName="ToXPoint" />
+                <ScalarProperty Name="YPoint" ColumnName="YPoint" />
+                <ScalarProperty Name="XPoint" ColumnName="XPoint" />
+                <ScalarProperty Name="Step" ColumnName="Step" />
+                <ScalarProperty Name="OperationSchemesID" ColumnName="OperationSchemesID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OperationSchemes">
+            <EntityTypeMapping TypeName="MarioModel.OperationSchemes">
+              <MappingFragment StoreEntitySet="OperationSchemes">
+                <ScalarProperty Name="SchemeType" ColumnName="SchemeType" />
+                <ScalarProperty Name="AppProjectsID" ColumnName="AppProjectsID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PhoneNumberSection">
+            <EntityTypeMapping TypeName="MarioModel.PhoneNumberSection">
+              <MappingFragment StoreEntitySet="PhoneNumberSection">
+                <ScalarProperty Name="ProvinceSimCode" ColumnName="ProvinceSimCode" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+                <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+                <ScalarProperty Name="TelecomOperators" ColumnName="TelecomOperators" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Province" ColumnName="Province" />
+                <ScalarProperty Name="NumberSection" ColumnName="NumberSection" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="MarioModel.Roles">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="Memo" ColumnName="Memo" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SystemLog">
+            <EntityTypeMapping TypeName="MarioModel.SystemLog">
+              <MappingFragment StoreEntitySet="SystemLog">
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Memo" ColumnName="Memo" />
+                <ScalarProperty Name="LogTime" ColumnName="LogTime" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserInfos">
+            <EntityTypeMapping TypeName="MarioModel.UserInfos">
+              <MappingFragment StoreEntitySet="UserInfos">
+                <ScalarProperty Name="WeiXinOpenID" ColumnName="WeiXinOpenID" />
+                <ScalarProperty Name="ChineseName" ColumnName="ChineseName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserInRole">
+            <EntityTypeMapping TypeName="MarioModel.UserInRole">
+              <MappingFragment StoreEntitySet="UserInRole">
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MobileDeviceModels">
+            <EntityTypeMapping TypeName="MarioModel.MobileDeviceModels">
+              <MappingFragment StoreEntitySet="MobileDeviceModels">
+                <ScalarProperty Name="RandomEnd" ColumnName="RandomEnd" />
+                <ScalarProperty Name="RandomStart" ColumnName="RandomStart" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="OSVersion" ColumnName="OSVersion" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="Device" ColumnName="Device" />
+                <ScalarProperty Name="Brand" ColumnName="Brand" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MobileDevices">
+            <EntityTypeMapping TypeName="MarioModel.MobileDevices">
+              <MappingFragment StoreEntitySet="MobileDevices">
+                <ScalarProperty Name="NeedReboot" ColumnName="NeedReboot" />
+                <ScalarProperty Name="RealModel" ColumnName="RealModel" />
+                <ScalarProperty Name="RealIMEI" ColumnName="RealIMEI" />
+                <ScalarProperty Name="LastResponseTime" ColumnName="LastResponseTime" />
+                <ScalarProperty Name="InUse" ColumnName="InUse" />
+                <ScalarProperty Name="Memo" ColumnName="Memo" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VirtualIMEI">
+            <EntityTypeMapping TypeName="MarioModel.VirtualIMEI">
+              <MappingFragment StoreEntitySet="VirtualIMEI">
+                <ScalarProperty Name="AndroidID" ColumnName="AndroidID" />
+                <ScalarProperty Name="OSVersion" ColumnName="OSVersion" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="RetainStartTime" ColumnName="RetainStartTime" />
+                <ScalarProperty Name="PhoneNumberCity" ColumnName="PhoneNumberCity" />
+                <ScalarProperty Name="NetworkType" ColumnName="NetworkType" />
+                <ScalarProperty Name="TelecomOperatorsName" ColumnName="TelecomOperatorsName" />
+                <ScalarProperty Name="SimSerialNumber" ColumnName="SimSerialNumber" />
+                <ScalarProperty Name="Line1Number" ColumnName="Line1Number" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="MobileDevicesID" ColumnName="MobileDevicesID" />
+                <ScalarProperty Name="TaskStatus" ColumnName="TaskStatus" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="Device" ColumnName="Device" />
+                <ScalarProperty Name="Brand" ColumnName="Brand" />
+                <ScalarProperty Name="MAC" ColumnName="MAC" />
+                <ScalarProperty Name="IMSI" ColumnName="IMSI" />
+                <ScalarProperty Name="IMEI" ColumnName="IMEI" />
+                <ScalarProperty Name="AppProjectsID" ColumnName="AppProjectsID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

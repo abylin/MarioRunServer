@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MarioModelStoreContainer" CdmEntityContainer="MarioEntities">
+    <EntitySetMapping Name="AppProjects">
+      <EntityTypeMapping TypeName="MarioModel.AppProjects">
+        <MappingFragment StoreEntitySet="AppProjects">
+          <ScalarProperty Name="RetainDelayHour" ColumnName="RetainDelayHour" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="AddLimit" ColumnName="AddLimit" />
+          <ScalarProperty Name="ChineseName" ColumnName="ChineseName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppProjectsBlackTime">
+      <EntityTypeMapping TypeName="MarioModel.AppProjectsBlackTime">
+        <MappingFragment StoreEntitySet="AppProjectsBlackTime">
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="AppProjectsID" ColumnName="AppProjectsID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppProjectsInMobileDevices">
+      <EntityTypeMapping TypeName="MarioModel.AppProjectsInMobileDevices">
+        <MappingFragment StoreEntitySet="AppProjectsInMobileDevices">
+          <ScalarProperty Name="AppProjectsID" ColumnName="AppProjectsID" />
+          <ScalarProperty Name="MobileDevicesID" ColumnName="MobileDevicesID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppProjectsInRole">
+      <EntityTypeMapping TypeName="MarioModel.AppProjectsInRole">
+        <MappingFragment StoreEntitySet="AppProjectsInRole">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="AppProjectsID" ColumnName="AppProjectsID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppProjectsRetention">
+      <EntityTypeMapping TypeName="MarioModel.AppProjectsRetention">
+        <MappingFragment StoreEntitySet="AppProjectsRetention">
+          <ScalarProperty Name="Retention" ColumnName="Retention" />
+          <ScalarProperty Name="Days" ColumnName="Days" />
+          <ScalarProperty Name="AppProjectsID" ColumnName="AppProjectsID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DayReport">
+      <EntityTypeMapping TypeName="MarioModel.DayReport">
+        <MappingFragment StoreEntitySet="DayReport">
+          <ScalarProperty Name="Retention" ColumnName="Retention" />
+          <ScalarProperty Name="AddCount" ColumnName="AddCount" />
+          <ScalarProperty Name="CollectDate" ColumnName="CollectDate" />
+          <ScalarProperty Name="AppProjectsID" ColumnName="AppProjectsID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MarioPackages">
+      <EntityTypeMapping TypeName="MarioModel.MarioPackages">
+        <MappingFragment StoreEntitySet="MarioPackages">
+          <ScalarProperty Name="Platform" ColumnName="Platform" />
+          <ScalarProperty Name="DownloadUrl" ColumnName="DownloadUrl" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MobileDevicesLog">
+      <EntityTypeMapping TypeName="MarioModel.MobileDevicesLog">
+        <MappingFragment StoreEntitySet="MobileDevicesLog">
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="LogTime" ColumnName="LogTime" />
+          <ScalarProperty Name="MobileDevicesID" ColumnName="MobileDevicesID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OperationMessages">
+      <EntityTypeMapping TypeName="MarioModel.OperationMessages">
+        <MappingFragment StoreEntitySet="OperationMessages">
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="CommandScript" ColumnName="CommandScript" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="Interval" ColumnName="Interval" />
+          <ScalarProperty Name="PhysicalKey" ColumnName="PhysicalKey" />
+          <ScalarProperty Name="ToYPoint" ColumnName="ToYPoint" />
+          <ScalarProperty Name="ToXPoint" ColumnName="ToXPoint" />
+          <ScalarProperty Name="YPoint" ColumnName="YPoint" />
+          <ScalarProperty Name="XPoint" ColumnName="XPoint" />
+          <ScalarProperty Name="Step" ColumnName="Step" />
+          <ScalarProperty Name="OperationSchemesID" ColumnName="OperationSchemesID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OperationSchemes">
+      <EntityTypeMapping TypeName="MarioModel.OperationSchemes">
+        <MappingFragment StoreEntitySet="OperationSchemes">
+          <ScalarProperty Name="SchemeType" ColumnName="SchemeType" />
+          <ScalarProperty Name="AppProjectsID" ColumnName="AppProjectsID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhoneNumberSection">
+      <EntityTypeMapping TypeName="MarioModel.PhoneNumberSection">
+        <MappingFragment StoreEntitySet="PhoneNumberSection">
+          <ScalarProperty Name="ProvinceSimCode" ColumnName="ProvinceSimCode" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+          <ScalarProperty Name="TelecomOperators" ColumnName="TelecomOperators" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="NumberSection" ColumnName="NumberSection" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="MarioModel.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemLog">
+      <EntityTypeMapping TypeName="MarioModel.SystemLog">
+        <MappingFragment StoreEntitySet="SystemLog">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="LogTime" ColumnName="LogTime" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserInfos">
+      <EntityTypeMapping TypeName="MarioModel.UserInfos">
+        <MappingFragment StoreEntitySet="UserInfos">
+          <ScalarProperty Name="WeiXinOpenID" ColumnName="WeiXinOpenID" />
+          <ScalarProperty Name="ChineseName" ColumnName="ChineseName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserInRole">
+      <EntityTypeMapping TypeName="MarioModel.UserInRole">
+        <MappingFragment StoreEntitySet="UserInRole">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MobileDeviceModels">
+      <EntityTypeMapping TypeName="MarioModel.MobileDeviceModels">
+        <MappingFragment StoreEntitySet="MobileDeviceModels">
+          <ScalarProperty Name="RandomEnd" ColumnName="RandomEnd" />
+          <ScalarProperty Name="RandomStart" ColumnName="RandomStart" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="OSVersion" ColumnName="OSVersion" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Device" ColumnName="Device" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MobileDevices">
+      <EntityTypeMapping TypeName="MarioModel.MobileDevices">
+        <MappingFragment StoreEntitySet="MobileDevices">
+          <ScalarProperty Name="NeedReboot" ColumnName="NeedReboot" />
+          <ScalarProperty Name="RealModel" ColumnName="RealModel" />
+          <ScalarProperty Name="RealIMEI" ColumnName="RealIMEI" />
+          <ScalarProperty Name="LastResponseTime" ColumnName="LastResponseTime" />
+          <ScalarProperty Name="InUse" ColumnName="InUse" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VirtualIMEI">
+      <EntityTypeMapping TypeName="MarioModel.VirtualIMEI">
+        <MappingFragment StoreEntitySet="VirtualIMEI">
+          <ScalarProperty Name="AndroidID" ColumnName="AndroidID" />
+          <ScalarProperty Name="OSVersion" ColumnName="OSVersion" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="RetainStartTime" ColumnName="RetainStartTime" />
+          <ScalarProperty Name="PhoneNumberCity" ColumnName="PhoneNumberCity" />
+          <ScalarProperty Name="NetworkType" ColumnName="NetworkType" />
+          <ScalarProperty Name="TelecomOperatorsName" ColumnName="TelecomOperatorsName" />
+          <ScalarProperty Name="SimSerialNumber" ColumnName="SimSerialNumber" />
+          <ScalarProperty Name="Line1Number" ColumnName="Line1Number" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="MobileDevicesID" ColumnName="MobileDevicesID" />
+          <ScalarProperty Name="TaskStatus" ColumnName="TaskStatus" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="Device" ColumnName="Device" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="MAC" ColumnName="MAC" />
+          <ScalarProperty Name="IMSI" ColumnName="IMSI" />
+          <ScalarProperty Name="IMEI" ColumnName="IMEI" />
+          <ScalarProperty Name="AppProjectsID" ColumnName="AppProjectsID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MarioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="MarioEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AppProjects" EntityType="MarioModel.AppProjects" />
+    <EntitySet Name="AppProjectsBlackTime" EntityType="MarioModel.AppProjectsBlackTime" />
+    <EntitySet Name="AppProjectsInMobileDevices" EntityType="MarioModel.AppProjectsInMobileDevices" />
+    <EntitySet Name="AppProjectsInRole" EntityType="MarioModel.AppProjectsInRole" />
+    <EntitySet Name="AppProjectsRetention" EntityType="MarioModel.AppProjectsRetention" />
+    <EntitySet Name="DayReport" EntityType="MarioModel.DayReport" />
+    <EntitySet Name="MarioPackages" EntityType="MarioModel.MarioPackages" />
+    <EntitySet Name="MobileDevicesLog" EntityType="MarioModel.MobileDevicesLog" />
+    <EntitySet Name="OperationMessages" EntityType="MarioModel.OperationMessages" />
+    <EntitySet Name="OperationSchemes" EntityType="MarioModel.OperationSchemes" />
+    <EntitySet Name="PhoneNumberSection" EntityType="MarioModel.PhoneNumberSection" />
+    <EntitySet Name="Roles" EntityType="MarioModel.Roles" />
+    <EntitySet Name="SystemLog" EntityType="MarioModel.SystemLog" />
+    <EntitySet Name="UserInfos" EntityType="MarioModel.UserInfos" />
+    <EntitySet Name="UserInRole" EntityType="MarioModel.UserInRole" />
+    <EntitySet Name="MobileDeviceModels" EntityType="MarioModel.MobileDeviceModels" />
+    <EntitySet Name="MobileDevices" EntityType="MarioModel.MobileDevices" />
+    <EntitySet Name="VirtualIMEI" EntityType="MarioModel.VirtualIMEI" />
+  </EntityContainer>
+  <EntityType Name="AppProjects">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ChineseName" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="AddLimit" Type="Int32" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="Memo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RetainDelayHour" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AppProjectsBlackTime">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AppProjectsID" Type="Int32" Nullable="false" />
+    <Property Name="StartTime" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="EndTime" Type="Time" Nullable="false" Precision="7" />
+  </EntityType>
+  <EntityType Name="AppProjectsInMobileDevices">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MobileDevicesID" Type="Int32" Nullable="false" />
+    <Property Name="AppProjectsID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AppProjectsInRole">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AppProjectsID" Type="Int32" Nullable="false" />
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AppProjectsRetention">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AppProjectsID" Type="Int32" Nullable="false" />
+    <Property Name="Days" Type="Int32" Nullable="false" />
+    <Property Name="Retention" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DayReport">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AppProjectsID" Type="Int32" Nullable="false" />
+    <Property Name="CollectDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AddCount" Type="Int32" Nullable="false" />
+    <Property Name="Retention" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MarioPackages">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Version" Type="Int32" Nullable="false" />
+    <Property Name="DownloadUrl" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Platform" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MobileDevicesLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MobileDevicesID" Type="Int32" Nullable="false" />
+    <Property Name="LogTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Memo" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="OperationMessages">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OperationSchemesID" Type="Int32" Nullable="false" />
+    <Property Name="Step" Type="Int32" Nullable="false" />
+    <Property Name="XPoint" Type="Int32" Nullable="false" />
+    <Property Name="YPoint" Type="Int32" Nullable="false" />
+    <Property Name="ToXPoint" Type="Int32" Nullable="false" />
+    <Property Name="ToYPoint" Type="Int32" Nullable="false" />
+    <Property Name="PhysicalKey" Type="Int32" Nullable="false" />
+    <Property Name="Interval" Type="Int32" Nullable="false" />
+    <Property Name="Action" Type="Int32" Nullable="false" />
+    <Property Name="CommandScript" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Memo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="OperationSchemes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="AppProjectsID" Type="Int32" Nullable="false" />
+    <Property Name="SchemeType" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PhoneNumberSection">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NumberSection" Type="Int32" Nullable="false" />
+    <Property Name="Province" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="TelecomOperators" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="AreaCode" Type="Int32" Nullable="false" />
+    <Property Name="ZipCode" Type="Int32" Nullable="false" />
+    <Property Name="ProvinceSimCode" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Memo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SystemLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="LogTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Memo" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UserInfos">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ChineseName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WeiXinOpenID" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UserInRole">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MobileDeviceModels">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Brand" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Device" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Width" Type="Int32" Nullable="false" />
+    <Property Name="Height" Type="Int32" Nullable="false" />
+    <Property Name="OSVersion" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Weight" Type="Int32" Nullable="false" />
+    <Property Name="RandomStart" Type="Int32" Nullable="false" />
+    <Property Name="RandomEnd" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MobileDevices">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Memo" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="InUse" Type="Boolean" Nullable="false" />
+    <Property Name="LastResponseTime" Type="DateTime" Precision="3" />
+    <Property Name="RealIMEI" Type="Int64" Nullable="false" />
+    <Property Name="RealModel" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="NeedReboot" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VirtualIMEI">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AppProjectsID" Type="Int32" Nullable="false" />
+    <Property Name="IMEI" Type="Int64" Nullable="false" />
+    <Property Name="IMSI" Type="Int64" Nullable="false" />
+    <Property Name="MAC" Type="String" MaxLength="17" FixedLength="false" Unicode="true" />
+    <Property Name="Brand" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Device" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TaskStatus" Type="Int32" Nullable="false" />
+    <Property Name="MobileDevicesID" Type="Int32" Nullable="false" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="Line1Number" Type="Int64" Nullable="false" />
+    <Property Name="SimSerialNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TelecomOperatorsName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="NetworkType" Type="Int32" Nullable="false" />
+    <Property Name="PhoneNumberCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RetainStartTime" Type="DateTime" Precision="3" />
+    <Property Name="Width" Type="Int32" Nullable="false" />
+    <Property Name="Height" Type="Int32" Nullable="false" />
+    <Property Name="OSVersion" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="AndroidID" Type="Int64" Nullable="false" />
+  </EntityType>
+</Schema>

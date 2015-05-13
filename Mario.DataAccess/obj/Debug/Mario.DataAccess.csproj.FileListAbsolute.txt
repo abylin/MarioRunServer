@@ -1,0 +1,10 @@
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.DataAccess\bin\Debug\Mario.DataAccess.dll.config
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.DataAccess\bin\Debug\Mario.DataAccess.dll
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.DataAccess\bin\Debug\Mario.DataAccess.pdb
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.DataAccess\obj\Debug\Mario.DataAccess.dll
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.DataAccess\obj\Debug\Mario.DataAccess.pdb
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.DataAccess\obj\Debug\Mario.DataAccess.csprojResolveAssemblyReference.cache

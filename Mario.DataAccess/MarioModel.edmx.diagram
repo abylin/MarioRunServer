@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8def4b9fdc0940b1bfb762305e79d696" Name="Diagram1" ZoomLevel="80">
+        <EntityTypeShape EntityType="MarioModel.AppProjects" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MarioModel.AppProjectsBlackTime" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MarioModel.AppProjectsInMobileDevices" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="MarioModel.AppProjectsInRole" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MarioModel.AppProjectsRetention" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="MarioModel.DayReport" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MarioModel.MarioPackages" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="MarioModel.MobileDevicesLog" Width="1.5" PointX="4.75" PointY="7.75" />
+        <EntityTypeShape EntityType="MarioModel.OperationMessages" Width="1.5" PointX="6.75" PointY="7.75" />
+        <EntityTypeShape EntityType="MarioModel.OperationSchemes" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MarioModel.PhoneNumberSection" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="MarioModel.Roles" Width="1.5" PointX="8.75" PointY="7.75" />
+        <EntityTypeShape EntityType="MarioModel.SystemLog" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="MarioModel.UserInfos" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MarioModel.UserInRole" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="MarioModel.MobileDeviceModels" Width="1.5" PointX="3.375" PointY="10.75" />
+        <EntityTypeShape EntityType="MarioModel.MobileDevices" Width="1.5" PointX="9.375" PointY="10.75" />
+        <EntityTypeShape EntityType="MarioModel.VirtualIMEI" Width="1.5" PointX="11.375" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

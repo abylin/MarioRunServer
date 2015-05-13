@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0433433E-C0B4-4969-8344-0D6F5F82EBFF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mario.WebUI</RootNamespace>
+    <AssemblyName>Mario.WebUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ext.Net">
+      <HintPath>..\packages\Ext.NET.3.1.0\lib\net45\Ext.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Ext.Net.Utilities">
+      <HintPath>..\packages\Ext.NET.Utilities.2.5.0\lib\Ext.Net.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Transformer.NET">
+      <HintPath>..\packages\Transformer.NET.2.1.1\lib\net35\Transformer.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx">
+      <HintPath>..\packages\WebActivatorEx.2.0.6\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Login.aspx" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ExtNetBreakLicense.ashx" />
+    <Content Include="Pages\CommandGuide.html" />
+    <Content Include="Pages\History.html" />
+    <Content Include="Pages\ManageRoles.aspx" />
+    <Content Include="Pages\ServerHelp.html" />
+    <Content Include="Pages\ViewAppProjectsSummaryReport.aspx" />
+    <Content Include="Pages\ViewDayReport.aspx" />
+    <Content Include="Pages\InConstruction.html" />
+    <Content Include="Pages\ManageAppProjects.aspx" />
+    <Content Include="Pages\ManageMarioPackages.aspx" />
+    <Content Include="Pages\ManageMobileDeviceModels.aspx" />
+    <Content Include="Pages\ManageMobileDevices.aspx" />
+    <Content Include="Pages\ViewMobileDevicesLogs.aspx" />
+    <Content Include="Pages\ViewSystemLogs.aspx" />
+    <Content Include="Pages\ViewTodayTasks.aspx" />
+    <Content Include="Resources\Images\explorer\icon-android.png" />
+    <Content Include="Resources\Images\explorer\icon-chrome.png" />
+    <Content Include="Resources\Images\explorer\icon-ff.png" />
+    <Content Include="Resources\Images\explorer\icon-ie.png" />
+    <Content Include="Resources\Images\explorer\icon-ios.png" />
+    <Content Include="Resources\Images\explorer\icon-opera.png" />
+    <Content Include="Resources\Images\explorer\icon-safari.png" />
+    <Content Include="Resources\Images\explorer\icon-win8.png" />
+    <Content Include="Resources\Images\InConstruction1.jpg" />
+    <Content Include="Resources\Images\InConstruction2.jpg" />
+    <Content Include="Resources\Images\PermissionDenied.jpg" />
+    <Content Include="Resources\css\component.css" />
+    <Content Include="Resources\css\css.css" />
+    <Content Include="Resources\css\default.css" />
+    <Content Include="Resources\Images\Rentention.png" />
+    <Content Include="Resources\js\demoad.js" />
+    <Content Include="Resources\js\modernizr.custom.js" />
+    <Content Include="Task.ashx" />
+    <None Include="Properties\PublishProfiles\Mario.Publish.pubxml" />
+    <Content Include="Resources\ExcelFiles\Template\OperationMessagesTemplate.xlsx" />
+    <Content Include="Resources\ExcelFiles\Template\RetentionTemplate.xlsx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="WeiXin\WeiXinHandler.ashx" />
+    <Content Include="WeiXin\QRImageHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Pages\ChangePassword.aspx" />
+    <Content Include="Pages\MainFrame.aspx" />
+    <Content Include="Pages\ManageUserInfos.aspx" />
+    <Content Include="Pages\PermissionDenied.html" />
+    <Content Include="Resources\Images\Mario1.jpg" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExtNetBreakLicense.ashx.cs">
+      <DependentUpon>ExtNetBreakLicense.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ManageRoles.aspx.cs">
+      <DependentUpon>ManageRoles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ManageRoles.aspx.designer.cs">
+      <DependentUpon>ManageRoles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ViewAppProjectsSummaryReport.aspx.cs">
+      <DependentUpon>ViewAppProjectsSummaryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ViewAppProjectsSummaryReport.aspx.designer.cs">
+      <DependentUpon>ViewAppProjectsSummaryReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ViewDayReport.aspx.cs">
+      <DependentUpon>ViewDayReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ViewDayReport.aspx.designer.cs">
+      <DependentUpon>ViewDayReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MainFrame.aspx.cs">
+      <DependentUpon>MainFrame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MainFrame.aspx.designer.cs">
+      <DependentUpon>MainFrame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ManageAppProjects.aspx.cs">
+      <DependentUpon>ManageAppProjects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ManageAppProjects.aspx.designer.cs">
+      <DependentUpon>ManageAppProjects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ManageMarioPackages.aspx.cs">
+      <DependentUpon>ManageMarioPackages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ManageMarioPackages.aspx.designer.cs">
+      <DependentUpon>ManageMarioPackages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ManageMobileDeviceModels.aspx.cs">
+      <DependentUpon>ManageMobileDeviceModels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ManageMobileDeviceModels.aspx.designer.cs">
+      <DependentUpon>ManageMobileDeviceModels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ManageMobileDevices.aspx.cs">
+      <DependentUpon>ManageMobileDevices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ManageMobileDevices.aspx.designer.cs">
+      <DependentUpon>ManageMobileDevices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ManageUserInfos.aspx.cs">
+      <DependentUpon>ManageUserInfos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ManageUserInfos.aspx.designer.cs">
+      <DependentUpon>ManageUserInfos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ViewMobileDevicesLogs.aspx.cs">
+      <DependentUpon>ViewMobileDevicesLogs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ViewMobileDevicesLogs.aspx.designer.cs">
+      <DependentUpon>ViewMobileDevicesLogs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ViewSystemLogs.aspx.cs">
+      <DependentUpon>ViewSystemLogs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ViewSystemLogs.aspx.designer.cs">
+      <DependentUpon>ViewSystemLogs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ViewTodayTasks.aspx.cs">
+      <DependentUpon>ViewTodayTasks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ViewTodayTasks.aspx.designer.cs">
+      <DependentUpon>ViewTodayTasks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectConst.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Task.ashx.cs">
+      <DependentUpon>Task.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WeiXin\Entity\WeiXinBaseEvent.cs" />
+    <Compile Include="WeiXin\Entity\WeiXinBaseMessage.cs" />
+    <Compile Include="WeiXin\Entity\WeixinTicketMessage.cs" />
+    <Compile Include="WeiXin\Entity\WeiXinTokenMessage.cs" />
+    <Compile Include="WeiXin\QRImageHandler.ashx.cs">
+      <DependentUpon>QRImageHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WeiXin\WeiXinHandler.ashx.cs">
+      <DependentUpon>WeiXinHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WeiXin\WeiXinHelper.cs" />
+    <Compile Include="WeiXin\Entity\WeiXinTextMessage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admins\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Resources\ExcelFiles\Temp\" />
+    <Folder Include="UpdatePackage\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mario.Business\Mario.Business.csproj">
+      <Project>{26c88f5a-47a1-4a6d-a7c3-815f3071315e}</Project>
+      <Name>Mario.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mario.DataAccess\Mario.DataAccess.csproj">
+      <Project>{bbcce0d9-6ba0-4c2c-a934-ec98fe2d5b96}</Project>
+      <Name>Mario.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>12574</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:12574/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

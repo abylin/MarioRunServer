@@ -1,0 +1,14 @@
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Business\bin\Debug\Mario.Business.dll.config
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Business\bin\Debug\Mario.Business.dll
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Business\bin\Debug\Mario.Business.pdb
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Business\bin\Debug\EntityFramework.dll
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Business\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Business\bin\Debug\Mario.DataAccess.dll
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Business\bin\Debug\Newtonsoft.Json.dll
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Business\bin\Debug\Mario.DataAccess.pdb
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Business\bin\Debug\EntityFramework.xml
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Business\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Business\bin\Debug\Newtonsoft.Json.xml
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Business\obj\Debug\Mario.Business.csprojResolveAssemblyReference.cache
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Business\obj\Debug\Mario.Business.dll
+C:\Users\aby\Documents\Visual Studio 2013\Projects\Mario\Mario.Business\obj\Debug\Mario.Business.pdb

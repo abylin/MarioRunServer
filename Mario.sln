@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mario.WebUI", "Mario.WebUI\Mario.WebUI.csproj", "{0433433E-C0B4-4969-8344-0D6F5F82EBFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mario.DataAccess", "Mario.DataAccess\Mario.DataAccess.csproj", "{BBCCE0D9-6BA0-4C2C-A934-EC98FE2D5B96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mario.Business", "Mario.Business\Mario.Business.csproj", "{26C88F5A-47A1-4A6D-A7C3-815F3071315E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mario.Console", "Mario.Console\Mario.Console.csproj", "{984CC606-A09D-45EE-A42B-37D024D80401}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mario.LoadTester", "Mario.LoadTester\Mario.LoadTester.csproj", "{FD9BF1BF-E37C-40CC-AF4E-DDDDD4FFA249}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0433433E-C0B4-4969-8344-0D6F5F82EBFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0433433E-C0B4-4969-8344-0D6F5F82EBFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0433433E-C0B4-4969-8344-0D6F5F82EBFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0433433E-C0B4-4969-8344-0D6F5F82EBFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBCCE0D9-6BA0-4C2C-A934-EC98FE2D5B96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBCCE0D9-6BA0-4C2C-A934-EC98FE2D5B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBCCE0D9-6BA0-4C2C-A934-EC98FE2D5B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBCCE0D9-6BA0-4C2C-A934-EC98FE2D5B96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26C88F5A-47A1-4A6D-A7C3-815F3071315E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26C88F5A-47A1-4A6D-A7C3-815F3071315E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26C88F5A-47A1-4A6D-A7C3-815F3071315E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26C88F5A-47A1-4A6D-A7C3-815F3071315E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{984CC606-A09D-45EE-A42B-37D024D80401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{984CC606-A09D-45EE-A42B-37D024D80401}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{984CC606-A09D-45EE-A42B-37D024D80401}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{984CC606-A09D-45EE-A42B-37D024D80401}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD9BF1BF-E37C-40CC-AF4E-DDDDD4FFA249}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD9BF1BF-E37C-40CC-AF4E-DDDDD4FFA249}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD9BF1BF-E37C-40CC-AF4E-DDDDD4FFA249}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD9BF1BF-E37C-40CC-AF4E-DDDDD4FFA249}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal

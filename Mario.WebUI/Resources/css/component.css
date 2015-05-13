@@ -1,0 +1,90 @@
+@font-face {
+	font-family: ecoico;
+	src: url(../fonts/timelineicons/ecoico.eot?#iefix) format("embedded-opentype"), url(../fonts/timelineicons/ecoico.woff) format("woff"), url(../fonts/timelineicons/ecoico.ttf) format("truetype"), url(../fonts/timelineicons/ecoico.svg#ecoico) format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+.cbp_tmtimeline {
+	list-style: none; margin: 30px 0px 0px; padding: 0px; position: relative;
+}
+.cbp_tmtimeline::before {
+	background: rgb(175, 220, 248); left: 20%; top: 0px; width: 10px; bottom: 0px; margin-left: -10px; position: absolute; content: "";
+}
+.cbp_tmtimeline > li {
+	position: relative;
+}
+.cbp_tmtimeline > li .cbp_tmtime {
+	width: 25%; padding-right: 100px; display: block; position: absolute;
+}
+.cbp_tmtimeline > li .cbp_tmtime span {
+	text-align: right; display: block;
+}
+.cbp_tmtimeline > li .cbp_tmtime span:first-child {
+	color: rgb(189, 208, 219); font-size: 0.9em;
+}
+.cbp_tmtimeline > li .cbp_tmtime span:last-child {
+	color: rgb(53, 148, 203); font-size: 2.9em;
+}
+.cbp_tmtimeline > li:nth-child(2n+1) .cbp_tmtime span:last-child {
+	color: rgb(108, 191, 238);
+}
+.cbp_tmtimeline > li .cbp_tmlabel {
+	background: rgb(53, 148, 203); margin: 0px 0px 15px 25%; padding: 2em; border-radius: 5px; color: rgb(255, 255, 255); line-height: 1.4; font-size: 1.2em; font-weight: 300; position: relative;
+}
+.cbp_tmtimeline > li:nth-child(2n+1) .cbp_tmlabel {
+	background: rgb(108, 191, 238);
+}
+.cbp_tmtimeline > li .cbp_tmlabel h2 {
+	padding: 0px 0px 10px; margin-top: 0px; border-bottom-color: rgba(255, 255, 255, 0.4); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.cbp_tmtimeline > li .cbp_tmlabel::after {
+	border-width: 10px; border-style: solid; border-color: transparent rgb(53, 148, 203) transparent transparent; border-image: none; top: 10px; width: 0px; height: 0px; right: 100%; position: absolute; content: " "; pointer-events: none;
+}
+.cbp_tmtimeline > li:nth-child(2n+1) .cbp_tmlabel::after {
+	border-right-color: rgb(108, 191, 238);
+}
+.cbp_tmtimeline > li .cbp_tmicon {
+	background: rgb(70, 164, 218); font: 1.4em/40px "ecoico"; margin: 0px 0px 0px -25px; border-radius: 50%; left: 20%; top: 0px; width: 40px; height: 40px; text-align: center; color: rgb(255, 255, 255); text-transform: none; position: absolute; box-shadow: 0px 0px 0px 8px #afdcf8; speak: none; -webkit-font-smoothing: antialiased;
+}
+.cbp_tmicon-phone::before {
+	content: "\a0";
+}
+.cbp_tmicon-screen::before {
+	content: "\a0";
+}
+.cbp_tmicon-mail::before {
+	content: "\a0";
+}
+.cbp_tmicon-earth::before {
+	content: "\a0";
+}
+@media screen and (max-width:65.37em)
+{
+.cbp_tmtimeline > li .cbp_tmtime span:last-child {
+	font-size: 1.5em;
+}
+}
+@media screen and (max-width:47.2em)
+{
+.cbp_tmtimeline::before {
+	display: none;
+}
+.cbp_tmtimeline > li .cbp_tmtime {
+	padding: 0px 0px 20px; width: 100%; position: relative;
+}
+.cbp_tmtimeline > li .cbp_tmtime span {
+	text-align: left;
+}
+.cbp_tmtimeline > li .cbp_tmlabel {
+	margin: 0px 0px 30px; padding: 1em; font-size: 95%; font-weight: 400;
+}
+.cbp_tmtimeline > li .cbp_tmlabel::after {
+	left: 20px; top: -20px; right: auto; border-right-color: transparent; border-bottom-color: rgb(53, 148, 203);
+}
+.cbp_tmtimeline > li:nth-child(2n+1) .cbp_tmlabel::after {
+	border-right-color: transparent; border-bottom-color: rgb(108, 191, 238);
+}
+.cbp_tmtimeline > li .cbp_tmicon {
+	margin: -55px 5px 0px 0px; left: auto; float: right; position: relative;
+}
+}
